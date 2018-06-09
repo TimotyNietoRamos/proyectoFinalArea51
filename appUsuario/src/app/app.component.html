@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" *ngIf="usuarioLogueado">
+    <a class="navbar-brand" href="#">Sistema</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span cla
+        ss="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/home">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/alumnos">Alumnos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/cursos">Cursos</a>
+            </li>
+        </ul>
+        <form>
+            <button class="btn btn-danger" type="button" (click)="logout()">Logout</button>
+        </form>
+    </div>
+    
+</nav>
+
+<router-outlet></router-outlet>
